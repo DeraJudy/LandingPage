@@ -6,6 +6,9 @@ body {
     min-height: 70vh;
     margin: 0;
     padding: 100px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 body::before {
@@ -20,15 +23,13 @@ body::before {
 }
 
 .container{
-    /* background-color: red; */
-    padding: 100px 0px;
-    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .image-container{
-    width: 25%;
     display: flex;
-    margin: 0 auto;
 }
 
 .image{
@@ -43,6 +44,7 @@ body::before {
 
 .text-container{
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .big-text{
@@ -52,23 +54,26 @@ body::before {
     font-size: 30px;
     letter-spacing: 1px;
     background: linear-gradient(270deg, #ffffff 10%, #845f8f 100%);
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* .line{
-    flex-grow: 1;
-    height: 2px;
-    border: none;
-    background-color: black;
-    margin-left: 1px;
-} */
+.divider {
+    /* display: inline-block; */
+    border: 1px solid #fff;
+    width: 20px;
+    height: 5px;
+    /* margin-left: 20px; */
+}
 
 .big-text span{
     letter-spacing: 1px;
     font-size: 35px;
+    
 }
 
 .small-text{
@@ -80,5 +85,56 @@ body::before {
 }
 
 .button-container{
-    margin-top: 30px;
+    color: #ffffff;
+    display: flex;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    padding: 7px 5px 9px 19px;
+}
+
+.input{
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    outline: none;
+}
+
+.color{
+    color: #ffffff;
+}
+
+.btn{
+    padding: 12px 20px;
+    border-radius: 50px;
+    background: rgb(143, 50, 143);
+    border: 1px solid rgb(143, 50, 143);
+    cursor: pointer;
+    color: #ffffff;
+    margin-left: 16px;
+    font-size: 19px;
+}
+
+@media (min-width: 250px) and (max-width: 520px){
+   
+    .big-text{
+        line-height: 40px;
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+
+    .small-text{
+        font-size: 11px;
+    }
+
+    .button-container{
+        border-radius: 30px;
+        padding: 3px 2px 3px 5px;
+    }
+
+    .btn{
+        padding: 7px 39px;
+        margin-left: 6px;
+        font-size: 11px;
+    }
+    
 }
